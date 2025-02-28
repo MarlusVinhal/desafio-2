@@ -1,0 +1,80 @@
+/* ======== Estilos básicos para o corpo da página ======== */
+body {
+    display: flex; /* Usa o modelo flexbox para centralizar o conteúdo */
+    justify-content: center; /* Centraliza o conteúdo horizontalmente */
+    align-items: center; /* Centraliza o conteúdo verticalmente */
+    height: 100vh; /* Define a altura da página como 100% da tela */
+    background-color: white; /* Define a cor de fundo como branco */
+    margin: 0; /* Remove margens padrão do navegador */
+    font-family: Arial, sans-serif; /* Define a fonte padrão */
+    overflow: hidden; /* Impede que a página tenha rolagem */
+}
+
+/* ======== Container principal ======== */
+.container {
+    text-align: center; /* Centraliza os elementos filhos */
+    width: 90%; /* Define uma largura adaptável */
+    max-width: 500px; /* Define uma largura máxima para evitar que fique muito grande */
+}
+
+/* ======== Estilização do botão ======== */
+button {
+    padding: 15px 30px; /* Define um espaçamento interno */
+    font-size: 18px; /* Define o tamanho da fonte */
+    cursor: pointer; /* Muda o cursor para indicar que o botão é clicável */
+    border: none; /* Remove a borda do botão */
+    border-radius: 5px; /* Arredonda os cantos do botão */
+    background-color: #5c1a96; /* Define a cor de fundo */
+    color: white; /* Define a cor do texto */
+    transition: transform 0.3s, background-color 0.3s; /* Adiciona animação suave */
+}
+
+/* Efeito ao passar o mouse sobre o botão */
+button:hover {
+    transform: scale(1.1); /* Aumenta ligeiramente o tamanho do botão */
+    background-color: #706c6c; /* Muda a cor ao passar o mouse */
+}
+
+/* ======== Estilização dos círculos animados ======== */
+.circle {
+    border-radius: 50%; /* Garante que o formato seja circular */
+    position: absolute; /* Permite o posicionamento livre */
+    transition: opacity 1s ease-out, transform 1s ease-out; /* Aplica animações suaves de desaparecimento */
+}
+
+/* ======== Responsividade para diferentes tamanhos de tela ======== */
+@media (max-width: 1024px) { /* Para telas menores que 1024px (tablets) */
+    body {
+        flex-direction: column; /* Organiza os elementos em coluna */
+        height: auto; /* Altura automática */
+        padding: 20px; /* Adiciona um espaçamento */
+    }
+
+    .container {
+        width: 100%;
+        max-width: 90%;
+    }
+
+    button {
+        font-size: 16px;
+        padding: 12px 25px;
+    }
+}
+
+@media (max-width: 768px) { /* Para telas menores que 768px (smartphones grandes) */
+    .container {
+        max-width: 80%;
+    }
+
+    button {
+        font-size: 14px;
+        padding: 10px 20px;
+    }
+}
+
+@media (max-width: 480px) { /* Para telas menores que 480px (smartphones pequenos) */
+    button {
+        font-size: 12px;
+        padding: 8px 16px;
+    }
+}
